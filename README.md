@@ -7,13 +7,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. Run `ng serve` and Navigate to `http://localhost:4200/`
 
 
-## Python Api
+## Python Api Back-end
 1. Install using `pip install` wget,flask, flask_cors, csv
-2. Run another CMD and Copy project path and run the following:
+2. Run another CLI and Copy project path and run the following:
 
 ``
 python.exe C:/Full-Stack-Tech-Screen/main.py
 ``
+
+Replace the ex.path C:/Full-Stack-Tech-Screen/main.py with your own project path.
 
 3. Navigate to `http://127.0.0.1:4847`
 
