@@ -1,0 +1,25 @@
+<h4>API: <a href="http://127.0.0.1:4847">127.0.0.1:4847</a></h4>
+<h4>Route List:</h4>
+<table class="table table-hover table-bordered">
+    <tbody>
+        <tr>
+            <td><h6><a href="http://127.0.0.1:4847/images">127.0.0.1:4847/images</a></h6></td>
+        </tr>
+        <tr>
+            <td><h6 class="mb-5"><a href="http://127.0.0.1:4847/images">127.0.0.1:4847/metadata/?image_name=ids_band_670_1591033268634.png</a></h6>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<div class="row">
+    <div class="card col-md-3 mr-5 mb-5" style="width: 18rem;" *ngFor="let image of images; index as i;">
+        <img src="assets/{{ image.image_name }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{ image.image_name }}</h5>
+          <hr>
+          <a [routerLink]="['/metadata', image.image_name]" class="btn btn-primary float-right">Check MetaData</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,10 @@
+RewriteEngine on
+
+Header set Access-Control-Allow-Origin 'http://localhost:4200'
+Header always set Access-Control-Allow-Methods "POST, GET, DELETE, PUT"
+Header always set Access-Control-Allow-Headers "*"
+
+RewriteCond $1 !^(main\.py|resources|robots\.txt)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ main.py/$1 [L,QSA]
